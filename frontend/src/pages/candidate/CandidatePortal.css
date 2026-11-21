@@ -1,0 +1,232 @@
+﻿.candidate-portal {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  color: #172033;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.candidate-header {
+  min-height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf4;
+}
+
+.candidate-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #172b4d;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.candidate-brand svg {
+  color: #2563eb;
+}
+
+.candidate-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.candidate-nav a {
+  color: #536176;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.candidate-nav a:hover {
+  color: #2563eb;
+}
+
+.candidate-nav .candidate-register-link {
+  padding: 11px 19px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.candidate-nav .candidate-register-link:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.candidate-hero {
+  flex: 1;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  background:
+    radial-gradient(circle at 85% 25%, rgba(37, 99, 235, 0.12), transparent 32%),
+    linear-gradient(120deg, #f8fafc 0%, #eff6ff 100%);
+}
+
+.candidate-hero-content {
+  max-width: 760px;
+}
+
+.candidate-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.candidate-hero h1 {
+  margin: 0;
+  color: #172b4d;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+  font-weight: 800;
+}
+
+.candidate-hero h1 span {
+  display: block;
+  color: #2563eb;
+}
+
+.candidate-hero-content > p {
+  max-width: 590px;
+  margin: 25px 0 32px;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.candidate-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.candidate-primary-button,
+.candidate-secondary-button {
+  min-height: 49px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.candidate-primary-button {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.18);
+}
+
+.candidate-primary-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.candidate-secondary-button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.candidate-secondary-button:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.candidate-signin-prompt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 27px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.candidate-signin-prompt a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.candidate-footer {
+  padding: 22px;
+  border-top: 1px solid #e8edf4;
+  background: #ffffff;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .candidate-header {
+    padding: 18px 5%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .candidate-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .candidate-nav a {
+    font-size: 13px;
+  }
+
+  .candidate-hero {
+    min-height: 560px;
+    padding: 65px 7%;
+  }
+
+  .candidate-hero h1 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+  .candidate-hero-content > p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .candidate-brand {
+    font-size: 18px;
+  }
+
+  .candidate-hero h1 {
+    font-size: 36px;
+  }
+
+  .candidate-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .candidate-signin-prompt {
+    flex-wrap: wrap;
+  }
+}

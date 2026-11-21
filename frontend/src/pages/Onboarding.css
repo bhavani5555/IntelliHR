@@ -1,0 +1,967 @@
+
+.onboarding-page {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    color: #25283a;
+  }
+  
+  .onboarding-heading,
+  .onboarding-heading-actions,
+  .onboarding-section-heading,
+  .onboarding-form-actions,
+  .onboarding-progress-top,
+  .onboarding-progress-counts,
+  .onboarding-toolbar,
+  .onboarding-row-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  
+  .onboarding-heading h2 {
+    margin: 5px 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+  }
+  
+  .onboarding-heading p,
+  .onboarding-section-heading p {
+    margin: 0;
+    color: #85899a;
+    font-size: 13px;
+  }
+  
+  .onboarding-eyebrow {
+    color: #7562e9;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+  
+  .onboarding-heading-actions button,
+  .onboarding-primary-btn,
+  .onboarding-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 15px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .onboarding-refresh,
+  .onboarding-secondary-btn {
+    background: #fff;
+    color: #555b6d;
+    border: 1px solid #e7e8ef;
+  }
+  
+  .onboarding-refresh:hover,
+  .onboarding-secondary-btn:hover {
+    background: #f7f7fb;
+  }
+  
+  .onboarding-primary-btn {
+    border: 1px solid #7562e9;
+    background: #7562e9;
+    color: #fff;
+  }
+  
+  .onboarding-primary-btn:hover {
+    background: #6552d4;
+  }
+  
+  .onboarding-primary-btn:disabled,
+  .onboarding-refresh:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .onboarding-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-radius: 9px;
+    font-size: 13px;
+  }
+  
+  .onboarding-alert button {
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .onboarding-alert.error {
+    color: #b42332;
+    background: #fff0f1;
+  }
+  
+  .onboarding-alert.success {
+    color: #16845c;
+    background: #eaf8f1;
+  }
+  
+  .onboarding-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+  }
+  
+  .onboarding-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 19px;
+    background: #fff;
+    border: 1px solid #ececf2;
+    border-radius: 12px;
+  }
+  
+  .onboarding-stat-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+  
+  .onboarding-stat-icon.purple {
+    color: #7562e9;
+    background: #f0edff;
+  }
+  
+  .onboarding-stat-icon.orange {
+    color: #d88b35;
+    background: #fff4e7;
+  }
+  
+  .onboarding-stat-icon.blue {
+    color: #3985d6;
+    background: #eaf4ff;
+  }
+  
+  .onboarding-stat-icon.green {
+    color: #20966c;
+    background: #e8f8f1;
+  }
+  
+  .onboarding-stat-card div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .onboarding-stat-card span {
+    color: #85899a;
+    font-size: 12px;
+  }
+  
+  .onboarding-stat-card strong {
+    font-size: 23px;
+    font-weight: 700;
+  }
+  
+  .onboarding-form-card,
+  .onboarding-progress-card,
+  .onboarding-task-card {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #ececf2;
+    border-radius: 13px;
+  }
+  
+  .onboarding-section-heading {
+    margin-bottom: 19px;
+  }
+  
+  .onboarding-section-heading h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .onboarding-icon-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ececf2;
+    border-radius: 8px;
+    background: #fff;
+    color: #6c7080;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .onboarding-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+  
+  .onboarding-form-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #4d5263;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .onboarding-form-grid label > span {
+    color: #e35c65;
+  }
+  
+  .onboarding-form-grid input,
+  .onboarding-form-grid select,
+  .onboarding-form-grid textarea,
+  .onboarding-progress-card select,
+  .onboarding-toolbar select {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #e5e6ed;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #303447;
+    font: inherit;
+    font-size: 13px;
+  }
+  
+  .onboarding-form-grid input:focus,
+  .onboarding-form-grid select:focus,
+  .onboarding-form-grid textarea:focus,
+  .onboarding-progress-card select:focus,
+  .onboarding-toolbar select:focus {
+    border-color: #9182ee;
+    box-shadow: 0 0 0 3px #7562e915;
+  }
+  
+  .onboarding-description-field {
+    grid-column: 1 / -1;
+  }
+  
+  .onboarding-form-grid textarea {
+    resize: vertical;
+  }
+  
+  .onboarding-form-actions {
+    justify-content: flex-end;
+    margin-top: 18px;
+  }
+  
+  .onboarding-progress-card > .onboarding-section-heading svg {
+    color: #7562e9;
+  }
+  
+  .onboarding-progress-card select {
+    max-width: 420px;
+  }
+  
+  .onboarding-progress-message {
+    margin: 15px 0 0;
+    color: #85899a;
+    font-size: 13px;
+  }
+  
+  .onboarding-progress-details {
+    margin-top: 20px;
+  }
+  
+  .onboarding-progress-top strong {
+    font-size: 14px;
+  }
+  
+  .onboarding-progress-top span {
+    color: #7562e9;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .onboarding-progress-track {
+    height: 9px;
+    margin: 13px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #efedf9;
+  }
+  
+  .onboarding-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #7562e9;
+    transition: width 0.3s ease;
+  }
+  
+  .onboarding-progress-counts {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    color: #85899a;
+    font-size: 12px;
+  }
+  
+  .onboarding-task-count {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #f2f0ff;
+    color: #7562e9;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  .onboarding-toolbar {
+    margin-bottom: 17px;
+  }
+  
+  .onboarding-search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: min(380px, 100%);
+    min-height: 41px;
+    padding: 0 12px;
+    border: 1px solid #e7e8ef;
+    border-radius: 8px;
+    color: #9699a8;
+  }
+  
+  .onboarding-search input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #303447;
+    font-size: 13px;
+  }
+  
+  .onboarding-toolbar select {
+    width: 165px;
+    min-height: 41px;
+  }
+  
+  .onboarding-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .onboarding-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .onboarding-table th {
+    padding: 13px 14px;
+    border-bottom: 1px solid #ececf2;
+    color: #9295a4;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+  }
+  
+  .onboarding-table td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #f0f0f4;
+    font-size: 12px;
+    vertical-align: middle;
+  }
+  
+  .onboarding-table tbody tr:last-child td {
+    border-bottom: 0;
+  }
+  
+  .onboarding-task-title,
+  .onboarding-employee-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+    max-width: 300px;
+  }
+  
+  .onboarding-task-title strong,
+  .onboarding-employee-cell strong {
+    color: #34384a;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .onboarding-task-title span,
+  .onboarding-employee-cell span {
+    overflow: hidden;
+    color: #9295a4;
+    font-size: 11px;
+    text-overflow: ellipsis;
+  }
+  
+  .onboarding-due-date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    color: #656a7b;
+    white-space: nowrap;
+  }
+  
+  .onboarding-due-date svg {
+    color: #9295a4;
+  }
+  
+  .onboarding-due-date.overdue {
+    color: #d34b57;
+  }
+  
+  .onboarding-due-date.overdue svg {
+    color: #d34b57;
+  }
+  
+  .onboarding-due-date small {
+    width: 100%;
+    margin-left: 21px;
+    font-size: 10px;
+  }
+  
+  .onboarding-status {
+    display: inline-flex;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .onboarding-status.pending {
+    color: #b7791f;
+    background: #fff5df;
+  }
+  
+  .onboarding-status.in_progress {
+    color: #347ac1;
+    background: #eaf4ff;
+  }
+  
+  .onboarding-status.completed {
+    color: #18845e;
+    background: #e8f8f0;
+  }
+  
+  .onboarding-status.cancelled {
+    color: #777b89;
+    background: #f0f0f3;
+  }
+  
+  .onboarding-row-actions {
+    justify-content: flex-start;
+    gap: 7px;
+    white-space: nowrap;
+  }
+  
+  .onboarding-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 30px;
+    padding: 0 9px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .onboarding-action-btn.start {
+    color: #347ac1;
+    background: #eaf4ff;
+  }
+  
+  .onboarding-action-btn.complete {
+    color: #18845e;
+    background: #e8f8f0;
+  }
+  
+  .onboarding-action-btn.cancel {
+    color: #b7791f;
+    background: #fff5df;
+  }
+  
+  .onboarding-action-btn.delete {
+    color: #d34b57;
+    background: #fff0f1;
+  }
+  
+  .onboarding-no-action {
+    color: #a0a2ad;
+  }
+  
+  .onboarding-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 190px;
+    color: #9295a4;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .onboarding-empty svg {
+    color: #aaa1ec;
+  }
+  
+  .onboarding-empty strong {
+    color: #45495a;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 900px) {
+    .onboarding-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .onboarding-heading,
+    .onboarding-heading-actions {
+      align-items: flex-start;
+    }
+  
+    .onboarding-heading {
+      flex-direction: column;
+    }
+  
+    .onboarding-heading-actions {
+      width: 100%;
+    }
+  
+    .onboarding-stats {
+      gap: 10px;
+    }
+  
+    .onboarding-stat-card {
+      padding: 13px;
+    }
+  
+    .onboarding-form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .onboarding-description-field {
+      grid-column: auto;
+    }
+  
+    .onboarding-form-card,
+    .onboarding-progress-card,
+    .onboarding-task-card {
+      padding: 15px;
+    }
+  
+    .onboarding-toolbar {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  
+    .onboarding-search,
+    .onboarding-toolbar select {
+      width: 100%;
+    }
+  
+    .onboarding-progress-counts {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+
+/*  ONBOARDING */
+
+.onboarding-page {
+  color: #25283a;
+}
+
+.onboarding-form-card,
+.onboarding-progress-card,
+.onboarding-task-card,
+.onboarding-stat-card {
+  box-shadow: 0 3px 14px rgba(31, 41, 55, 0.035);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.onboarding-stat-card:hover,
+.onboarding-form-card:hover,
+.onboarding-progress-card:hover,
+.onboarding-task-card:hover {
+  border-color: #dcd8f8;
+}
+
+.onboarding-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.onboarding-table tbody tr:hover {
+  background: #faf9ff;
+}
+
+.onboarding-search:focus-within {
+  border-color: #9182ee;
+  box-shadow: 0 0 0 3px #7562e915;
+}
+
+.onboarding-heading h2 {
+  color: #20243a;
+}
+
+.onboarding-section-heading h3,
+.onboarding-stat-card strong,
+.onboarding-progress-top strong {
+  color: #292d40;
+}
+
+.onboarding-form-grid input::placeholder,
+.onboarding-form-grid textarea::placeholder,
+.onboarding-search input::placeholder {
+  color: #a0a3b1;
+}
+
+.onboarding-action-btn,
+.onboarding-icon-btn,
+.onboarding-heading-actions button {
+  transition: all 0.2s ease;
+}
+
+.onboarding-action-btn:hover {
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+.onboarding-icon-btn:hover {
+  background: #f5f3ff;
+  color: #6552d4;
+}
+
+.onboarding-alert.error {
+  border: 1px solid #ffd5d8;
+}
+
+.onboarding-alert.success {
+  border: 1px solid #c8eedb;
+}
+
+html[data-theme="dark"] .onboarding-page {
+  color: #e5e7ef;
+}
+
+html[data-theme="dark"] .onboarding-heading h2,
+html[data-theme="dark"] .onboarding-section-heading h3,
+html[data-theme="dark"] .onboarding-stat-card strong,
+html[data-theme="dark"] .onboarding-progress-top strong,
+html[data-theme="dark"] .onboarding-empty strong {
+  color: #f1f3f9;
+}
+
+html[data-theme="dark"] .onboarding-heading p,
+html[data-theme="dark"] .onboarding-section-heading p,
+html[data-theme="dark"] .onboarding-stat-card span,
+html[data-theme="dark"] .onboarding-progress-message,
+html[data-theme="dark"] .onboarding-progress-counts {
+  color: #a5adbd;
+}
+
+html[data-theme="dark"] .onboarding-eyebrow {
+  color: #b3a6ff;
+}
+
+html[data-theme="dark"] .onboarding-stat-card,
+html[data-theme="dark"] .onboarding-form-card,
+html[data-theme="dark"] .onboarding-progress-card,
+html[data-theme="dark"] .onboarding-task-card {
+  background: #1b2030;
+  border-color: #30384a;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .onboarding-stat-card:hover,
+html[data-theme="dark"] .onboarding-form-card:hover,
+html[data-theme="dark"] .onboarding-progress-card:hover,
+html[data-theme="dark"] .onboarding-task-card:hover {
+  border-color: #555078;
+}
+
+html[data-theme="dark"] .onboarding-refresh,
+html[data-theme="dark"] .onboarding-secondary-btn {
+  background: #252c3d;
+  color: #e0e4ee;
+  border-color: #3b4559;
+}
+
+html[data-theme="dark"] .onboarding-refresh:hover,
+html[data-theme="dark"] .onboarding-secondary-btn:hover {
+  background: #30394d;
+}
+
+html[data-theme="dark"] .onboarding-primary-btn {
+  background: #7665df;
+  border-color: #7665df;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .onboarding-primary-btn:hover {
+  background: #8878ee;
+  border-color: #8878ee;
+}
+
+html[data-theme="dark"] .onboarding-alert.error {
+  color: #ffadb4;
+  background: #38232d;
+  border: 1px solid #663641;
+}
+
+html[data-theme="dark"] .onboarding-alert.success {
+  color: #8de0b8;
+  background: #1d382f;
+  border: 1px solid #315c49;
+}
+
+html[data-theme="dark"] .onboarding-alert button {
+  color: #d8dce7;
+}
+
+html[data-theme="dark"] .onboarding-stat-icon.purple {
+  color: #b5a8ff;
+  background: #342d55;
+}
+
+html[data-theme="dark"] .onboarding-stat-icon.orange {
+  color: #ffc17d;
+  background: #493522;
+}
+
+html[data-theme="dark"] .onboarding-stat-icon.blue {
+  color: #8bc5ff;
+  background: #243b55;
+}
+
+html[data-theme="dark"] .onboarding-stat-icon.green {
+  color: #80ddb3;
+  background: #244638;
+}
+
+html[data-theme="dark"] .onboarding-icon-btn {
+  color: #d0d5e2;
+  background: #252c3d;
+  border-color: #3b4559;
+}
+
+html[data-theme="dark"] .onboarding-icon-btn:hover {
+  color: #c1b6ff;
+  background: #34304f;
+}
+
+html[data-theme="dark"] .onboarding-form-grid label {
+  color: #d5dae6;
+}
+
+html[data-theme="dark"] .onboarding-form-grid input,
+html[data-theme="dark"] .onboarding-form-grid select,
+html[data-theme="dark"] .onboarding-form-grid textarea,
+html[data-theme="dark"] .onboarding-progress-card select,
+html[data-theme="dark"] .onboarding-toolbar select {
+  color: #e5e9f2;
+  background: #252c3d;
+  border-color: #414b60;
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] .onboarding-form-grid input::placeholder,
+html[data-theme="dark"] .onboarding-form-grid textarea::placeholder {
+  color: #8791a5;
+}
+
+html[data-theme="dark"] .onboarding-form-grid select option,
+html[data-theme="dark"] .onboarding-progress-card select option,
+html[data-theme="dark"] .onboarding-toolbar select option {
+  color: #e5e9f2;
+  background: #252c3d;
+}
+
+html[data-theme="dark"] .onboarding-form-grid input:focus,
+html[data-theme="dark"] .onboarding-form-grid select:focus,
+html[data-theme="dark"] .onboarding-form-grid textarea:focus,
+html[data-theme="dark"] .onboarding-progress-card select:focus,
+html[data-theme="dark"] .onboarding-toolbar select:focus {
+  border-color: #9586f2;
+  box-shadow: 0 0 0 3px rgba(149, 134, 242, 0.16);
+}
+
+html[data-theme="dark"] .onboarding-progress-card > .onboarding-section-heading svg {
+  color: #b5a8ff;
+}
+
+html[data-theme="dark"] .onboarding-progress-top span {
+  color: #b5a8ff;
+}
+
+html[data-theme="dark"] .onboarding-progress-track {
+  background: #35304f;
+}
+
+html[data-theme="dark"] .onboarding-progress-fill {
+  background: #8878ee;
+}
+
+html[data-theme="dark"] .onboarding-task-count {
+  color: #c2b8ff;
+  background: #342f50;
+}
+
+html[data-theme="dark"] .onboarding-search {
+  color: #a5adbd;
+  background: #252c3d;
+  border-color: #414b60;
+}
+
+html[data-theme="dark"] .onboarding-search input {
+  color: #e5e9f2;
+}
+
+html[data-theme="dark"] .onboarding-search input::placeholder {
+  color: #8993a7;
+}
+
+html[data-theme="dark"] .onboarding-search:focus-within {
+  border-color: #9586f2;
+  box-shadow: 0 0 0 3px rgba(149, 134, 242, 0.16);
+}
+
+html[data-theme="dark"] .onboarding-table th {
+  color: #a5adbd;
+  border-bottom-color: #384155;
+}
+
+html[data-theme="dark"] .onboarding-table td {
+  border-bottom-color: #30384a;
+  color: #dce1ec;
+}
+
+html[data-theme="dark"] .onboarding-table tbody tr:hover {
+  background: #252c3d;
+}
+
+html[data-theme="dark"] .onboarding-task-title strong,
+html[data-theme="dark"] .onboarding-employee-cell strong {
+  color: #e8ebf3;
+}
+
+html[data-theme="dark"] .onboarding-task-title span,
+html[data-theme="dark"] .onboarding-employee-cell span {
+  color: #a0a9ba;
+}
+
+html[data-theme="dark"] .onboarding-due-date {
+  color: #c6ccda;
+}
+
+html[data-theme="dark"] .onboarding-due-date svg {
+  color: #9ca7ba;
+}
+
+html[data-theme="dark"] .onboarding-due-date.overdue,
+html[data-theme="dark"] .onboarding-due-date.overdue svg {
+  color: #ff929c;
+}
+
+html[data-theme="dark"] .onboarding-status.pending {
+  color: #ffd18a;
+  background: #49391f;
+}
+
+html[data-theme="dark"] .onboarding-status.in_progress {
+  color: #9bcaff;
+  background: #263e59;
+}
+
+html[data-theme="dark"] .onboarding-status.completed {
+  color: #8ce0b7;
+  background: #244638;
+}
+
+html[data-theme="dark"] .onboarding-status.cancelled {
+  color: #c0c6d2;
+  background: #363d4c;
+}
+
+html[data-theme="dark"] .onboarding-action-btn.start {
+  color: #9bcaff;
+  background: #263e59;
+}
+
+html[data-theme="dark"] .onboarding-action-btn.complete {
+  color: #8ce0b7;
+  background: #244638;
+}
+
+html[data-theme="dark"] .onboarding-action-btn.cancel {
+  color: #ffd18a;
+  background: #49391f;
+}
+
+html[data-theme="dark"] .onboarding-action-btn.delete {
+  color: #ff9da5;
+  background: #482b35;
+}
+
+html[data-theme="dark"] .onboarding-action-btn:hover {
+  filter: brightness(1.15);
+}
+
+html[data-theme="dark"] .onboarding-no-action {
+  color: #8791a5;
+}
+
+html[data-theme="dark"] .onboarding-empty {
+  color: #a5adbd;
+}
+
+html[data-theme="dark"] .onboarding-empty svg {
+  color: #a99af7;
+}
+
+html[data-theme="dark"] .onboarding-empty strong {
+  color: #e5e9f2;
+}
+
+.onboarding-page button:focus-visible,
+.onboarding-page input:focus-visible,
+.onboarding-page select:focus-visible,
+.onboarding-page textarea:focus-visible {
+  outline: 2px solid #9586f2;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .onboarding-heading-actions button {
+    flex: 1;
+  }
+
+  .onboarding-progress-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .onboarding-table {
+    min-width: 620px;
+  }
+}

@@ -35,3 +35,18 @@ pom-backup-before-ai-reset.xml
 
 # Temporary backup files
 *.backup
+
+# Frontend dependencies and build
+frontend/node_modules/
+frontend/dist/
+
+# Frontend environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Frontend logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/pnpm-debug.log*
+

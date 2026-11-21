@@ -1,0 +1,1779 @@
+
+.leaves-page {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    color: #f1f5f9;
+  }
+  
+  .leaves-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .leaves-header h1 {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+  
+  .leaves-header p {
+    margin: 7px 0 0;
+    color: #94a3b8;
+    font-size: 14px;
+  }
+  
+  .leave-refresh-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 16px;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .leave-refresh-btn:hover {
+    background: #334155;
+  }
+  
+  .leave-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+  }
+  
+  .leave-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 21px;
+    background: #111c30;
+    border: 1px solid #243249;
+    border-radius: 13px;
+  }
+  
+  .leave-stat-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+  }
+  
+  .leave-stat-icon.total {
+    color: #60a5fa;
+    background: #1e3a5f;
+  }
+  
+  .leave-stat-icon.pending {
+    color: #fbbf24;
+    background: #493719;
+  }
+  
+  .leave-stat-icon.approved {
+    color: #4ade80;
+    background: #173e31;
+  }
+  
+  .leave-stat-icon.rejected {
+    color: #f87171;
+    background: #48262b;
+  }
+  
+  .leave-stat-card span {
+    display: block;
+    color: #94a3b8;
+    font-size: 12px;
+  }
+  
+  .leave-stat-card h2 {
+    margin: 5px 0 0;
+    color: #f8fafc;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .leaves-content-card {
+    background: #111c30;
+    border: 1px solid #243249;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  
+  .leaves-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 22px 23px;
+    border-bottom: 1px solid #243249;
+  }
+  
+  .leaves-toolbar h2 {
+    margin: 0;
+    color: #f1f5f9;
+    font-size: 17px;
+    font-weight: 650;
+  }
+  
+  .leaves-toolbar p {
+    margin: 6px 0 0;
+    color: #94a3b8;
+    font-size: 12px;
+  }
+  
+  .leaves-filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .leave-search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 245px;
+    padding: 10px 12px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #94a3b8;
+    background: #0b1425;
+  }
+  
+  .leave-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #e2e8f0;
+    font-size: 12px;
+  }
+  
+  .leave-search input::placeholder {
+    color: #64748b;
+  }
+  
+  .leaves-filters select {
+    padding: 10px 12px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    outline: none;
+    background: #0b1425;
+    color: #e2e8f0;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .leaves-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .leaves-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .leaves-table th {
+    padding: 14px 17px;
+    background: #162238;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  
+  .leaves-table td {
+    padding: 16px 17px;
+    border-bottom: 1px solid #243249;
+    color: #cbd5e1;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .leaves-table tbody tr:hover {
+    background: #17243a;
+  }
+  
+  .leaves-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .leave-employee {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  
+  .leave-avatar {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #263c5c;
+    color: #93c5fd;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .leave-employee strong {
+    display: block;
+    color: #f1f5f9;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .leave-employee span {
+    display: block;
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 10px;
+  }
+  
+  .leave-duration strong,
+  .leave-duration span {
+    display: block;
+  }
+  
+  .leave-duration strong {
+    color: #e2e8f0;
+    font-weight: 500;
+  }
+  
+  .leave-duration span {
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 11px;
+  }
+  
+  .leave-reason {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .leave-status {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  
+  .leave-status.pending {
+    background: #493719;
+    color: #fbbf24;
+  }
+  
+  .leave-status.approved {
+    background: #173e31;
+    color: #4ade80;
+  }
+  
+  .leave-status.rejected {
+    background: #48262b;
+    color: #f87171;
+  }
+  
+  .leave-status.cancelled {
+    background: #334155;
+    color: #cbd5e1;
+  }
+  
+  /* Approve and Reject buttons */
+  
+  .leave-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .leave-approve-btn,
+  .leave-reject-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px 9px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .leave-approve-btn {
+    color: #4ade80;
+    background: #173e31;
+    border: 1px solid #286044;
+  }
+  
+  .leave-approve-btn:hover {
+    background: #20583f;
+  }
+  
+  .leave-reject-btn {
+    color: #f87171;
+    background: #48262b;
+    border: 1px solid #71333b;
+  }
+  
+  .leave-reject-btn:hover {
+    background: #622d34;
+  }
+  
+  .leave-no-action {
+    color: #64748b;
+  }
+  
+  /* Success and error messages */
+  
+  .leave-feedback {
+    padding: 12px 16px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .leave-feedback.error {
+    color: #fca5a5;
+    background: #48262b;
+    border: 1px solid #71333b;
+  }
+  
+  .leave-feedback.success {
+    color: #86efac;
+    background: #173e31;
+    border: 1px solid #286044;
+  }
+  
+  /* Review modal */
+  
+  .leave-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(2, 6, 23, 0.78);
+    backdrop-filter: blur(5px);
+  }
+  
+  .leave-review-modal {
+    width: 100%;
+    max-width: 490px;
+    padding: 25px;
+    background: #111c30;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+  
+  .leave-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #243249;
+  }
+  
+  .leave-modal-header h2 {
+    margin: 0;
+    color: #f8fafc;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  
+  .leave-modal-header p {
+    margin: 7px 0 0;
+    color: #94a3b8;
+    font-size: 12px;
+  }
+  
+  .leave-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #1e293b;
+    color: #cbd5e1;
+    cursor: pointer;
+  }
+  
+  .leave-modal-close:hover {
+    background: #334155;
+  }
+  
+  .leave-review-details {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 13px;
+    padding: 20px 0;
+    border-bottom: 1px solid #243249;
+  }
+  
+  .leave-review-details span {
+    color: #94a3b8;
+    font-size: 12px;
+  }
+  
+  .leave-review-details strong {
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  
+  .leave-remarks-label {
+    display: block;
+    margin: 20px 0 9px;
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .leave-remarks-input {
+    width: 100%;
+    min-height: 105px;
+    padding: 12px;
+    resize: vertical;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    outline: none;
+    background: #0b1425;
+    color: #f1f5f9;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.6;
+    box-sizing: border-box;
+  }
+  
+  .leave-remarks-input:focus {
+    border-color: #60a5fa;
+  }
+  
+  .leave-remarks-input::placeholder {
+    color: #64748b;
+  }
+  
+  .leave-remarks-count {
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 10px;
+    text-align: right;
+  }
+  
+  .leave-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  
+  .leave-cancel-btn,
+  .leave-confirm-approve,
+  .leave-confirm-reject {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .leave-cancel-btn {
+    color: #cbd5e1;
+    background: #1e293b;
+    border: 1px solid #334155;
+  }
+  
+  .leave-cancel-btn:hover {
+    background: #334155;
+  }
+  
+  .leave-confirm-approve {
+    color: #052e16;
+    background: #4ade80;
+    border: 1px solid #4ade80;
+  }
+  
+  .leave-confirm-approve:hover {
+    background: #86efac;
+  }
+  
+  .leave-confirm-reject {
+    color: #fff;
+    background: #dc4545;
+    border: 1px solid #dc4545;
+  }
+  
+  .leave-confirm-reject:hover {
+    background: #ef4444;
+  }
+  
+  .leave-cancel-btn:disabled,
+  .leave-confirm-approve:disabled,
+  .leave-confirm-reject:disabled,
+  .leave-modal-close:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  
+  /* Loading and empty states */
+  
+  .leaves-message {
+    padding: 55px 20px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  
+  .leaves-message.error {
+    color: #f87171;
+  }
+  
+  .leaves-empty {
+    padding: 55px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #64748b;
+    text-align: center;
+  }
+  
+  .leaves-empty h3 {
+    margin: 14px 0 5px;
+    color: #e2e8f0;
+    font-size: 15px;
+  }
+  
+  .leaves-empty p {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .leaves-footer {
+    padding: 14px 22px;
+    border-top: 1px solid #243249;
+    color: #64748b;
+    font-size: 11px;
+  }
+  
+  /* Responsive layout */
+  
+  @media (max-width: 1100px) {
+    .leave-stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .leaves-toolbar {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .leaves-filters {
+      width: 100%;
+    }
+  
+    .leave-search {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .leaves-header {
+      align-items: flex-start;
+    }
+  
+    .leaves-header h1 {
+      font-size: 22px;
+    }
+  
+    .leave-stats-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+  
+    .leave-stat-card {
+      padding: 14px;
+      gap: 10px;
+    }
+  
+    .leave-stat-icon {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .leave-stat-card h2 {
+      font-size: 21px;
+    }
+  
+    .leaves-filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .leave-search {
+      min-width: 0;
+    }
+  
+    .leave-review-modal {
+      padding: 19px;
+    }
+  
+    .leave-modal-header h2 {
+      font-size: 17px;
+    }
+  
+    .leave-review-details {
+      grid-template-columns: 95px 1fr;
+    }
+  
+    .leave-modal-actions {
+      flex-direction: column-reverse;
+    }
+  
+    .leave-cancel-btn,
+    .leave-confirm-approve,
+    .leave-confirm-reject {
+      width: 100%;
+    }
+  }
+  
+
+.leave-apply-modal {
+  --apply-surface: #111c30;
+  --apply-input: #0b1425;
+  --apply-border: #334155;
+  --apply-text: #f1f5f9;
+  --apply-muted: #94a3b8;
+  --apply-accent: #4ade80;
+  width: 100%;
+  max-width: 680px;
+  padding: 30px 34px;
+  border: 1px solid #2b3b54;
+  border-radius: 20px;
+  background: var(--apply-surface);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+  color: var(--apply-text);
+  box-sizing: border-box;
+}
+
+.leave-apply-modal .leave-modal-header {
+  align-items: center;
+  padding-bottom: 23px;
+  margin-bottom: 22px;
+}
+
+.leave-apply-modal .leave-modal-header h2 {
+  font-size: 23px;
+  letter-spacing: -0.5px;
+}
+
+.leave-apply-modal .leave-modal-header p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.leave-apply-modal .leave-review-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--apply-border);
+}
+
+.leave-apply-modal .leave-review-details label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  color: var(--apply-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.leave-apply-modal .leave-review-details select,
+.leave-apply-modal .leave-review-details input {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  border: 1px solid var(--apply-border);
+  border-radius: 10px;
+  outline: none;
+  background: var(--apply-input);
+  color: var(--apply-text);
+  font-family: inherit;
+  font-size: 13px;
+  color-scheme: dark;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leave-apply-modal .leave-review-details select {
+  cursor: pointer;
+}
+
+.leave-apply-modal .leave-review-details input:focus,
+.leave-apply-modal .leave-review-details select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.13);
+}
+
+.leave-apply-modal .leave-remarks-label {
+  margin: 23px 0 10px;
+  color: var(--apply-text);
+  font-size: 13px;
+}
+
+.leave-apply-modal .leave-remarks-input {
+  min-height: 125px;
+  padding: 14px 15px;
+  border: 1px solid var(--apply-border);
+  border-radius: 11px;
+  background: var(--apply-input);
+  color: var(--apply-text);
+  font-size: 13px;
+  line-height: 1.7;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leave-apply-modal .leave-remarks-input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.13);
+}
+
+.leave-apply-modal .leave-remarks-input::placeholder {
+  color: var(--apply-muted);
+  opacity: 0.8;
+}
+
+.leave-apply-modal .leave-remarks-count {
+  margin-top: 8px;
+  color: var(--apply-muted);
+  font-size: 11px;
+}
+
+.leave-apply-modal .leave-modal-actions {
+  margin-top: 25px;
+  gap: 12px;
+}
+
+.leave-apply-modal .leave-cancel-btn,
+.leave-apply-modal .leave-confirm-approve {
+  min-height: 45px;
+  padding: 0 21px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.leave-apply-modal .leave-confirm-approve {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #052e16;
+}
+
+.leave-apply-modal .leave-confirm-approve:hover {
+  background: #4ade80;
+  border-color: #4ade80;
+  transform: translateY(-1px);
+}
+
+.leave-apply-modal .leave-cancel-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Light theme */
+
+html[data-theme="light"] .leave-apply-modal {
+  --apply-surface: #ffffff;
+  --apply-input: #f8fafc;
+  --apply-border: #dbe3ed;
+  --apply-text: #172033;
+  --apply-muted: #64748b;
+  --apply-accent: #16a34a;
+  border-color: #e2e8f0;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.18);
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-modal-header {
+  border-bottom-color: #e8edf4;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-modal-header h2 {
+  color: #172033;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-modal-header p {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-modal-close {
+  background: #f1f5f9;
+  border-color: #dbe3ed;
+  color: #334155;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-modal-close:hover {
+  background: #e2e8f0;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-review-details {
+  border-bottom-color: #e8edf4;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-review-details label,
+html[data-theme="light"] .leave-apply-modal .leave-remarks-label {
+  color: #263449;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-review-details select,
+html[data-theme="light"] .leave-apply-modal .leave-review-details input,
+html[data-theme="light"] .leave-apply-modal .leave-remarks-input {
+  color: #172033;
+  color-scheme: light;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-remarks-input::placeholder {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-cancel-btn {
+  background: #f1f5f9;
+  border-color: #dbe3ed;
+  color: #334155;
+}
+
+html[data-theme="light"] .leave-apply-modal .leave-cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Responsive modal */
+
+@media (max-width: 600px) {
+  .leave-apply-modal {
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    padding: 22px 19px;
+    border-radius: 16px;
+  }
+
+  .leave-apply-modal .leave-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .leave-apply-modal .leave-review-details {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .leave-apply-modal .leave-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .leave-apply-modal .leave-cancel-btn,
+  .leave-apply-modal .leave-confirm-approve {
+    width: 100%;
+  }
+}
+
+
+/* LIGHT THEME */
+
+html[data-theme="light"] .leaves-page {
+  color: #172033;
+}
+
+html[data-theme="light"] .leaves-header h1 {
+  color: #172033;
+}
+
+html[data-theme="light"] .leaves-header p,
+html[data-theme="light"] .leaves-toolbar p {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-refresh-btn {
+  background: #ffffff;
+  color: #334155;
+  border-color: #dbe3ed;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+html[data-theme="light"] .leave-refresh-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+html[data-theme="light"] .leave-stat-card,
+html[data-theme="light"] .leaves-content-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+html[data-theme="light"] .leave-stat-card span {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-stat-card h2 {
+  color: #172033;
+}
+
+html[data-theme="light"] .leaves-toolbar {
+  border-color: #e8edf4;
+}
+
+html[data-theme="light"] .leaves-toolbar h2 {
+  color: #172033;
+}
+
+html[data-theme="light"] .leave-search,
+html[data-theme="light"] .leaves-filters select {
+  background: #f8fafc;
+  border-color: #dbe3ed;
+  color: #475569;
+}
+
+html[data-theme="light"] .leave-search input {
+  background: transparent;
+  color: #172033;
+}
+
+html[data-theme="light"] .leave-search input::placeholder {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] .leaves-table th {
+  background: #f1f5f9;
+  color: #64748b;
+  border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .leaves-table td {
+  color: #475569;
+  border-color: #e8edf4;
+}
+
+html[data-theme="light"] .leaves-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+html[data-theme="light"] .leave-employee strong {
+  color: #172033;
+}
+
+html[data-theme="light"] .leave-employee span {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-duration strong {
+  color: #334155;
+}
+
+html[data-theme="light"] .leave-duration span {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-no-action,
+html[data-theme="light"] .leaves-footer {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] .leave-avatar {
+  background: #edf3ff;
+  color: #356ac5;
+}
+
+html[data-theme="light"] .leave-status.pending {
+  background: #fff7df;
+  color: #a16207;
+}
+
+html[data-theme="light"] .leave-status.approved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+html[data-theme="light"] .leave-status.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+html[data-theme="light"] .leave-status.cancelled {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+html[data-theme="light"] .leave-approve-btn {
+  color: #15803d;
+  background: #dcfce7;
+  border-color: #bbf7d0;
+}
+
+html[data-theme="light"] .leave-approve-btn:hover {
+  background: #bbf7d0;
+}
+
+html[data-theme="light"] .leave-reject-btn {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+html[data-theme="light"] .leave-reject-btn:hover {
+  background: #fecaca;
+}
+
+html[data-theme="light"] .leave-feedback.success {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+html[data-theme="light"] .leave-feedback.error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+html[data-theme="light"] .leave-modal-overlay {
+  background: rgba(15, 23, 42, 0.42);
+}
+
+html[data-theme="light"] .leave-review-modal {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.2);
+}
+
+html[data-theme="light"] .leave-modal-header {
+  border-color: #e8edf4;
+}
+
+html[data-theme="light"] .leave-modal-header h2 {
+  color: #172033;
+}
+
+html[data-theme="light"] .leave-modal-header p {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-modal-close {
+  background: #f1f5f9;
+  border-color: #dbe3ed;
+  color: #475569;
+}
+
+html[data-theme="light"] .leave-review-details {
+  border-color: #e8edf4;
+}
+
+html[data-theme="light"] .leave-review-details span {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leave-review-details strong,
+html[data-theme="light"] .leave-remarks-label {
+  color: #334155;
+}
+
+html[data-theme="light"] .leave-remarks-input {
+  background: #f8fafc;
+  border-color: #dbe3ed;
+  color: #172033;
+}
+
+html[data-theme="light"] .leave-remarks-input::placeholder {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] .leave-remarks-count {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] .leave-cancel-btn {
+  color: #334155;
+  background: #f1f5f9;
+  border-color: #dbe3ed;
+}
+
+html[data-theme="light"] .leave-cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+html[data-theme="light"] .leaves-empty h3 {
+  color: #334155;
+}
+
+html[data-theme="light"] .leaves-empty p,
+html[data-theme="light"] .leaves-empty {
+  color: #64748b;
+}
+
+html[data-theme="light"] .leaves-footer {
+  border-color: #e8edf4;
+}
+
+/* DARK THEME - MATCH INTELLIHR APP PALETTE */
+
+html[data-theme="dark"] .leaves-page {
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .leaves-header h1,
+html[data-theme="dark"] .leave-stat-card h2,
+html[data-theme="dark"] .leaves-toolbar h2,
+html[data-theme="dark"] .leave-employee strong,
+html[data-theme="dark"] .leaves-empty h3 {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .leaves-header p,
+html[data-theme="dark"] .leaves-toolbar p,
+html[data-theme="dark"] .leave-stat-card span {
+  color: #9caabd;
+}
+
+html[data-theme="dark"] .leave-refresh-btn {
+  background: #253145;
+  color: #d1d9e6;
+  border-color: #3a4960;
+}
+
+html[data-theme="dark"] .leave-refresh-btn:hover {
+  background: #35445c;
+}
+
+html[data-theme="dark"] .leave-stat-card,
+html[data-theme="dark"] .leaves-content-card {
+  background: #1b2433;
+  border-color: #303b4d;
+  box-shadow: 0 2px 10px #00000020;
+}
+
+html[data-theme="dark"] .leaves-toolbar {
+  border-color: #303b4d;
+}
+
+html[data-theme="dark"] .leave-search,
+html[data-theme="dark"] .leaves-filters select {
+  background: #202c3d;
+  border-color: #43516a;
+  color: #d1d9e6;
+}
+
+html[data-theme="dark"] .leave-search input {
+  background: transparent;
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .leaves-table th {
+  background: #253145;
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .leaves-table td {
+  color: #d1d9e6;
+  border-color: #354155;
+}
+
+html[data-theme="dark"] .leaves-table tbody tr:hover {
+  background: #253145;
+}
+
+html[data-theme="dark"] .leave-employee span,
+html[data-theme="dark"] .leave-duration span,
+html[data-theme="dark"] .leave-no-action,
+html[data-theme="dark"] .leaves-footer {
+  color: #9caabd;
+}
+
+html[data-theme="dark"] .leave-duration strong {
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .leave-avatar {
+  background: #293b55;
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .leave-modal-overlay {
+  background: rgba(2, 6, 23, 0.78);
+}
+
+html[data-theme="dark"] .leave-review-modal {
+  background: #1b2433;
+  border-color: #3a4659;
+}
+
+html[data-theme="dark"] .leave-modal-header,
+html[data-theme="dark"] .leave-review-details {
+  border-color: #354155;
+}
+
+html[data-theme="dark"] .leave-modal-header h2 {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .leave-modal-header p,
+html[data-theme="dark"] .leave-review-details span {
+  color: #9caabd;
+}
+
+html[data-theme="dark"] .leave-review-details strong,
+html[data-theme="dark"] .leave-remarks-label {
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .leave-modal-close,
+html[data-theme="dark"] .leave-cancel-btn {
+  background: #253145;
+  border-color: #3a4960;
+  color: #d1d9e6;
+}
+
+html[data-theme="dark"] .leave-remarks-input {
+  background: #202c3d;
+  border-color: #43516a;
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .leave-remarks-count,
+html[data-theme="dark"] .leaves-empty {
+  color: #9caabd;
+}
+
+html[data-theme="dark"] .leaves-empty h3 {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .leaves-footer {
+  border-color: #354155;
+}
+
+/* Keep status colors readable in both themes */
+
+html[data-theme="dark"] .leave-status.pending {
+  background: #493719;
+  color: #fbbf24;
+}
+
+html[data-theme="dark"] .leave-status.approved {
+  background: #173e31;
+  color: #4ade80;
+}
+
+html[data-theme="dark"] .leave-status.rejected {
+  background: #48262b;
+  color: #f87171;
+}
+
+html[data-theme="dark"] .leave-status.cancelled {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .leave-approve-btn {
+  color: #4ade80;
+  background: #173e31;
+  border-color: #286044;
+}
+
+html[data-theme="dark"] .leave-reject-btn {
+  color: #f87171;
+  background: #48262b;
+  border-color: #71333b;
+}
+
+/* Consistent table and form transitions */
+
+.leaves-content-card,
+.leave-stat-card,
+.leaves-table tbody tr,
+.leave-refresh-btn {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* LEAVE BALANCE  */
+
+.leave-balance-section {
+  margin-bottom: 28px;
+  padding: 24px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 16px;
+}
+
+.leave-balance-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.leave-balance-heading h2 {
+  margin: 0 0 6px;
+  color: var(--text-primary, #172033);
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.leave-balance-heading p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+}
+
+.leave-balance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.leave-balance-card {
+  min-width: 0;
+  padding: 20px;
+  background: var(--card-secondary-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 13px;
+}
+
+.leave-balance-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.leave-balance-card-top h3 {
+  margin: 0;
+  color: var(--text-primary, #172033);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.leave-balance-card-top span {
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.leave-balance-remaining {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.leave-balance-remaining strong {
+  color: var(--primary-color, #4f46e5);
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.leave-balance-remaining span {
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.leave-balance-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.leave-balance-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.leave-balance-details span {
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+}
+
+.leave-balance-details strong {
+  color: var(--text-primary, #172033);
+  font-size: 14px;
+}
+
+.leave-balance-progress {
+  height: 7px;
+  overflow: hidden;
+  background: var(--border-color, #e2e8f0);
+  border-radius: 20px;
+}
+
+.leave-balance-progress > div {
+  height: 100%;
+  background: var(--primary-color, #4f46e5);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.leave-balance-empty {
+  grid-column: 1 / -1;
+  padding: 22px;
+  color: var(--text-secondary, #64748b);
+  text-align: center;
+  font-size: 13px;
+}
+
+.leave-balances-table {
+  width: 100%;
+  min-width: 700px;
+}
+
+/* Dark theme */
+
+html[data-theme="dark"] .leave-balance-section {
+  background: #1b2433;
+  border-color: #354155;
+}
+
+html[data-theme="dark"] .leave-balance-heading h2,
+html[data-theme="dark"] .leave-balance-card-top h3,
+html[data-theme="dark"] .leave-balance-details strong {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .leave-balance-heading p,
+html[data-theme="dark"] .leave-balance-card-top span,
+html[data-theme="dark"] .leave-balance-remaining span,
+html[data-theme="dark"] .leave-balance-details span,
+html[data-theme="dark"] .leave-balance-empty {
+  color: #9caabd;
+}
+
+html[data-theme="dark"] .leave-balance-card {
+  background: #202c3d;
+  border-color: #3a4960;
+}
+
+html[data-theme="dark"] .leave-balance-remaining strong {
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .leave-balance-progress {
+  background: #354155;
+}
+
+html[data-theme="dark"] .leave-balance-progress > div {
+  background: #60a5fa;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+  .leave-balance-section {
+    padding: 16px;
+  }
+
+  .leave-balance-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .leave-balance-card {
+    padding: 16px;
+  }
+
+  .leave-balance-remaining strong {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leave-balance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* EMPLOYEE LEAVE BALANCE MANAGEMENT */
+
+.leave-balance-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.leave-balance-result-count {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+}
+
+.leave-balance-result-count strong {
+  color: var(--text-primary, #172033);
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.leave-balance-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: min(100%, 320px);
+  padding: 0 12px;
+  background: var(--card-secondary-bg, #f8fafc);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 9px;
+  color: var(--text-secondary, #64748b);
+}
+
+.leave-balance-search input {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary, #172033);
+  font-size: 13px;
+}
+
+.leave-balance-search input::placeholder {
+  color: var(--text-secondary, #94a3b8);
+}
+
+.leave-balances-table {
+  min-width: 760px;
+}
+
+.leave-balance-employee-row td {
+  vertical-align: middle;
+}
+
+.leave-balance-employee-row td strong {
+  color: var(--text-primary, #172033);
+  font-weight: 700;
+}
+
+.leave-balance-total-remaining {
+  color: #0f9f6e !important;
+}
+
+.leave-balance-expand-btn {
+  padding: 7px 11px;
+  border: 1px solid var(--border-color, #dbe3ee);
+  border-radius: 7px;
+  background: var(--card-secondary-bg, #f8fafc);
+  color: var(--primary-color, #4f46e5);
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.leave-balance-expand-btn:hover {
+  background: var(--primary-color, #4f46e5);
+  border-color: var(--primary-color, #4f46e5);
+  color: #ffffff;
+}
+
+.leave-balance-details-row td {
+  padding: 0 !important;
+  background: var(--card-secondary-bg, #f8fafc);
+}
+
+.leave-balance-expanded {
+  padding: 18px 24px 20px;
+}
+
+.leave-balance-expanded h4 {
+  margin: 0 0 12px;
+  color: var(--text-primary, #172033);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.leave-balance-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leave-balance-detail-table th,
+.leave-balance-detail-table td {
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.leave-balance-detail-table th {
+  color: var(--text-primary, #172033);
+  font-weight: 700;
+}
+
+.leave-balance-detail-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.leave-balance-detail-table td strong {
+  color: var(--text-primary, #172033);
+}
+
+.leave-balance-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 18px;
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.leave-balance-pagination > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.leave-balance-pagination button {
+  padding: 7px 12px;
+  border: 1px solid var(--border-color, #dbe3ee);
+  border-radius: 7px;
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #172033);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.leave-balance-pagination button:hover:not(:disabled) {
+  border-color: var(--primary-color, #4f46e5);
+  color: var(--primary-color, #4f46e5);
+}
+
+.leave-balance-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+html[data-theme="dark"] .leave-balance-result-count strong,
+html[data-theme="dark"] .leave-balance-employee-row td strong,
+html[data-theme="dark"] .leave-balance-expanded h4,
+html[data-theme="dark"] .leave-balance-detail-table th,
+html[data-theme="dark"] .leave-balance-detail-table td strong,
+html[data-theme="dark"] .leave-balance-pagination button {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .leave-balance-search {
+  background: #202c3d;
+  border-color: #3a4960;
+}
+
+html[data-theme="dark"] .leave-balance-search input {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .leave-balance-expand-btn {
+  background: #253145;
+  border-color: #40516a;
+  color: #93c5fd;
+}
+
+html[data-theme="dark"] .leave-balance-expand-btn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .leave-balance-details-row td {
+  background: #202c3d;
+}
+
+html[data-theme="dark"] .leave-balance-detail-table th,
+html[data-theme="dark"] .leave-balance-detail-table td {
+  border-color: #354155;
+}
+
+html[data-theme="dark"] .leave-balance-pagination button {
+  background: #202c3d;
+  border-color: #40516a;
+}
+
+@media (max-width: 640px) {
+  .leave-balance-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .leave-balance-search {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .leave-balance-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .leave-balance-pagination > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .leave-balance-expanded {
+    padding: 14px;
+    overflow-x: auto;
+  }
+
+  .leave-balance-detail-table {
+    min-width: 440px;
+  }
+}
+
+/* Leave balance breakdown column alignment */
+.leave-balance-detail-table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: left;
+}
+
+.leave-balance-detail-table th:first-child,
+.leave-balance-detail-table td:first-child {
+  width: 40%;
+  text-align: left;
+}
+
+.leave-balance-detail-table th:nth-child(n+2),
+.leave-balance-detail-table td:nth-child(n+2) {
+  width: 20%;
+  text-align: center;
+}
+

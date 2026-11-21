@@ -1,0 +1,37 @@
+# Maven build
+target/
+build/
+
+# Uploaded documents and user files
+uploads/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.sts4-cache
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local/private configuration
+application-local.properties
+application-secret.properties
+
+pom-backup-before-ai-reset.xml
+
+# Temporary backup files
+*.backup
